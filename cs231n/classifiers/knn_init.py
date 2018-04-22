@@ -2,6 +2,8 @@ import numpy as np
 from cs231n.classifiers.k_nearest_neighbor import KNearestNeighbor
 from cs231n.classifiers.data_util import load_cifar10
 import matplotlib.pyplot as plt
+
+
 x_train,y_train,x_test,y_test=load_cifar10('../datasets/cifar-10-batches-py')
 
 print('training data shape:',x_train.shape)
@@ -9,12 +11,12 @@ print('training labels shape:',y_train.shape)
 print('test data shape:',x_test.shape)
 print('test labels shape:',y_test.shape)
 
-classes=['plane','car','bird','cat','deer','dog','frog','horse','ship','truck']
-num_claesses=len(classes)
-samples_per_class=7
-for y ,cls in enumerate(classes):
-    idxs=np.flatnonzero(y_train==y)
-    idxs=np.random.choice(idxs,samples_per_class,replace=False)
+# classes=['plane','car','bird','cat','deer','dog','frog','horse','ship','truck']
+# num_claesses=len(classes)
+# samples_per_class=7
+# for y ,cls in enumerate(classes):
+#     idxs=np.flatnonzero(y_train==y)
+#     idxs=np.random.choice(idxs,samples_per_class,replace=False)
     # for i ,idx in enumerate(idxs):
         # plt_idx=i*num_claesses+y+1
         # plt.subplot(samples_per_class,num_claesses,plt_idx)
